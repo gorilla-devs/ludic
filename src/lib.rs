@@ -13,18 +13,28 @@ pub mod tests {
     #[test]
     pub fn test_faber() {
         let run = get_fabric_versions();
-        block_on(run);
+        let out = block_on(run);
+        println!("{:?}", out);
     }
 
     #[test]
     pub fn test_forgic() {
         let run = get_forge_versions();
-        block_on(run);
+        let out = block_on(run);
+        println!("{:?}", out);
     }
 
     #[test]
     pub fn test_quantum() {
         let run = get_quilt_versions();
-        block_on(run);
+        let out = block_on(run);
+        println!("{:?}", out);
+    }
+
+    #[test]
+    pub fn test_vanel() {
+        let run = get_minecraft_versions();
+        let out = block_on(run);
+        println!("{:?}", out);
     }
 }
