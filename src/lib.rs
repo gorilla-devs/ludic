@@ -6,14 +6,6 @@ pub use vanel::*;
 pub mod converters;
 pub mod util;
 
-use neon::prelude::{ModuleContext, NeonResult};
-
-#[neon::main]
-pub fn main(mut ctx: ModuleContext) -> NeonResult<()> {
-    ctx.export_function("getFabricVersions", converters::faber::get_fabric_versions)?;
-    return Ok(());
-}
-
 pub mod tests {
     #[test]
     fn test_faber() {
