@@ -1,6 +1,6 @@
 pub use faber::*;
 pub use forgic::*;
-pub use quantum::*;
+pub use quantum_mc::*;
 pub use vanel::*;
 
 pub mod tests {
@@ -12,7 +12,7 @@ pub mod tests {
     pub use faber::*;
     pub use forgic::*;
     pub use futures::executor::block_on;
-    pub use quantum::*;
+    pub use quantum_mc::*;
     pub use vanel::*;
 
     pub fn test_faber() -> faber::MavenVersionResult {
@@ -29,7 +29,7 @@ pub mod tests {
         return out;
     }
 
-    pub fn test_quantum() -> quantum::MavenVersionResult {
+    pub fn test_quantum() -> quantum_mc::MavenVersionResult {
         let run = get_quilt_versions();
         let out = block_on(run);
         println!("{:?}", out);
